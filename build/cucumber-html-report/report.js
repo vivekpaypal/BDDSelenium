@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("com/example/freelance/definitions/add.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("add.feature");
 formatter.feature({
   "line": 2,
   "name": "add two numbers",
@@ -49,14 +49,14 @@ formatter.match({
   "location": "AddDef.two_numbers_and(int,int)"
 });
 formatter.result({
-  "duration": 115511374,
+  "duration": 104585152,
   "status": "passed"
 });
 formatter.match({
   "location": "AddDef.add_them()"
 });
 formatter.result({
-  "duration": 36654,
+  "duration": 21618,
   "status": "passed"
 });
 formatter.match({
@@ -69,7 +69,7 @@ formatter.match({
   "location": "AddDef.verify_result_is(int)"
 });
 formatter.result({
-  "duration": 2314484,
+  "duration": 1988406,
   "status": "passed"
 });
 formatter.scenario({
@@ -107,10 +107,10 @@ formatter.match({
   "location": "AddDef.two_numbers_add_and_verify(DataTable)"
 });
 formatter.result({
-  "duration": 1438965,
+  "duration": 1475157,
   "status": "passed"
 });
-formatter.uri("com/example/freelance/definitions/cucumbertag.feature");
+formatter.uri("cucumbertag.feature");
 formatter.feature({
   "line": 1,
   "name": "Search scenario",
@@ -171,7 +171,7 @@ formatter.examples({
   ]
 });
 formatter.before({
-  "duration": 4053446402,
+  "duration": 3524651847,
   "status": "passed"
 });
 formatter.scenario({
@@ -210,7 +210,7 @@ formatter.match({
   "location": "BaseTest.open_browser()"
 });
 formatter.result({
-  "duration": 28828,
+  "duration": 21142,
   "status": "passed"
 });
 formatter.match({
@@ -223,7 +223,7 @@ formatter.match({
   "location": "SearchDefinition.you_search_for(String)"
 });
 formatter.result({
-  "duration": 3177100783,
+  "duration": 4088653570,
   "status": "passed"
 });
 formatter.match({
@@ -236,14 +236,14 @@ formatter.match({
   "location": "SearchDefinition.you_search_for(int)"
 });
 formatter.result({
-  "duration": 99244531,
+  "duration": 97124477,
   "status": "passed"
 });
 formatter.after({
-  "duration": 18704463,
+  "duration": 8834428,
   "status": "passed"
 });
-formatter.uri("com/example/freelance/definitions/search.feature");
+formatter.uri("search.feature");
 formatter.feature({
   "line": 1,
   "name": "Search scenario",
@@ -252,7 +252,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 3320023346,
+  "duration": 3490861142,
   "status": "passed"
 });
 formatter.scenario({
@@ -277,7 +277,7 @@ formatter.match({
   "location": "BaseTest.open_browser()"
 });
 formatter.result({
-  "duration": 32386,
+  "duration": 20336,
   "status": "passed"
 });
 formatter.match({
@@ -290,11 +290,11 @@ formatter.match({
   "location": "SearchDefinition.you_search_for(String)"
 });
 formatter.result({
-  "duration": 3048738706,
+  "duration": 3194725894,
   "status": "passed"
 });
 formatter.after({
-  "duration": 11767078,
+  "duration": 10931987,
   "status": "passed"
 });
 });
