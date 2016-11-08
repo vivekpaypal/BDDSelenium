@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 
 public class BaseTest {
@@ -59,14 +60,17 @@ public class BaseTest {
     	
     	DriverSession.getDriver().close();
     }
-    
+    @Before("~@DontNeedHook")
+   	public void openBroswer(){
+    	openBrowser();
+   	}
   
     @Given("browser is open")
 	public void open_browser(){
-		openBrowser();
+		// do nothing
 	}
     
-    @After
+    @After("~@DontNeedHook")
    	public void close(){
    		closeBrowser();
    	}

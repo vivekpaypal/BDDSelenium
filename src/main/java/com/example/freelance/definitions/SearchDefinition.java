@@ -1,6 +1,7 @@
 package com.example.freelance.definitions;
 
-import org.apache.http.util.Asserts;
+
+
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
@@ -27,21 +28,24 @@ public class SearchDefinition{
 	}
 	
 	
-	@Then("number of products listed should be (\\d+)")
-	public void you_search_for(int productsListed){
+	@Then("number of products listed should be (\\d+)$")
+	public void you_search_for(int prodcutIndex){
+		
 		
 		snapDealSearchResultPage = SnapDealSearchResultPage.getInstance();
-		Assert.assertTrue(productsListed ==snapDealSearchResultPage.getSizeProducts(),"product listed is equal");
+		Assert.assertTrue(prodcutIndex ==snapDealSearchResultPage.getSizeProducts(),"product listed is equal");
+		
 		
 	}
 	
-	@Then("click on product number (\\d+)")
-	public void click_on_one_product(int prodcutIndex){
+	@Then("click on product number (\\d+)$")
+	public void click_on_one_product_number(int  index){
 		
 		String productDescription;
 		snapDealSearchResultPage = SnapDealSearchResultPage.getInstance();
-		if(prodcutIndex < snapDealSearchResultPage.getSizeProducts()){
-			WebElement productLink = snapDealSearchResultPage.getProducts().get(prodcutIndex);
+		
+		if( index < snapDealSearchResultPage.getSizeProducts()){
+			WebElement productLink = snapDealSearchResultPage.getProducts().get(index);
 			productDescription  = productLink.getText();
 			productLink.click();
 			snapDealProductPage = SnapDealProductPage.getInstance();
@@ -52,6 +56,7 @@ public class SearchDefinition{
 			System.out.println(snapDealProductPage.getProductHeading().getText());
 			Assert.assertTrue(productDescription.contains(snapDealProductPage.getProductHeading().getText()));
 		}
+		
 	
 	}
 	
